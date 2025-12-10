@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f0f1e;
+    color: white;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.caracteristicas, .ventajas {
+    padding: 100px 20px;
+    background: #1a1a2e;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+    color: #667eea;
+}
+
+.grid-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+}
+
+.tarjeta h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.ventajas {
+    background: #0f0f1e;
+}
+
+.grid-ventajas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ventaja-item {
+    background: #1a1a2e;
+    border: 2px solid #667eea;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.ventaja-item:hover {
+    background: #667eea;
+    transform: scale(1.05);
+}
+
+.ventaja-numero {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.ventaja-item:hover .ventaja-numero {
+    color: white;
+}
+
+.ventaja-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.ventaja-item p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.cta {
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    text-align: center;
+    opacity: 0;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.cta-button {
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 18px 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.cta-button:active {
+    transform: translateY(-2px);
+}
+
+.footer {
+    background: #0a0a14;
+    padding: 60px 20px 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.footer-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.footer-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    opacity: 0.6;
+}
+
+.fade-in-gsap {
+    opacity: 0;
+}
+
+.slide-left {
+    transform: translateX(-200px);
+    opacity: 0;
+}
+
+.slide-right {
+    transform: translateX(200px);
+    opacity: 0;
+}
+
+.slide-top {
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+.slide-bottom {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .cta h2 {
+        font-size: 2rem;
+    }
+    
+    .grid-caracteristicas,
+    .grid-ventajas {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
