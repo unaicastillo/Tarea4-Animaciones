@@ -69,5 +69,5 @@ gsap.utils.toArray('.slide-bottom').forEach(element => {
 });
 
 document.querySelector('.cta-button').addEventListener('click', function() {
-    alert('¡Gracias por tu interés! Pronto nos pondremos en contacto contigo.');
+    alert('Este boton funciona muy bien, apruebame el trimestre porfa' );
 });
